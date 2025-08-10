@@ -1,4 +1,3 @@
-import React from 'react';
 import { ChevronDown, Play, Download } from 'lucide-react';
 
 const Hero = () => {
@@ -9,9 +8,9 @@ const Hero = () => {
       <div className="text-center z-10 px-6">
         <div className="mb-8">
           <h1 className="font-orbitron text-6xl md:text-8xl font-black mb-4">
-            <span className="text-white glitch-text" data-text="ALEX">ALEX</span>
+            <span className="text-white glitch-text" data-text="SABAL">SABAL</span>
             <br />
-            <span className="text-neon-red glow-text" data-text="QUANTUM">QUANTUM</span>
+            <span className="text-neon-red glow-text" data-text="KRISHNA">KRISHNA</span>
           </h1>
           <div className="h-1 w-32 bg-gradient-to-r from-transparent via-neon-red to-transparent mx-auto mb-6 animate-pulse"></div>
           <p className="font-rajdhani text-xl md:text-2xl text-gray-300 tracking-wider mb-2">

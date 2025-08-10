@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 
 const Navigation = () => {
@@ -29,7 +29,7 @@ const Navigation = () => {
       <div className="container mx-auto px-6 py-4">
         <div className="flex justify-between items-center">
           <div className="font-orbitron text-2xl font-bold text-neon-red glitch-text">
-            QUANTUM.DEV
+            SABAL.DEV
           </div>
           
           {/* Desktop Menu */}

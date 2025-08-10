@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Send, Mail, MapPin, Phone, Linkedin, Github, Monitor } from 'lucide-react';
+import { Send, Mail, MapPin, Phone, Linkedin, Github } from 'lucide-react';
+import UnrealLogo from './icons/UnrealLogo';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -95,7 +96,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <div className="font-rajdhani text-sm text-gray-400">EMAIL PROTOCOL</div>
-                  <div className="font-rajdhani text-lg text-white">alex.quantum@dev.net</div>
+                  <div className="font-rajdhani text-lg text-white">sabalkrpc2811@gmail.com</div>
                 </div>
               </div>
 
@@ -107,7 +108,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <div className="font-rajdhani text-sm text-gray-400">VOICE CHANNEL</div>
-                  <div className="font-rajdhani text-lg text-white">+1 (555) 123-4567</div>
+                  <div className="font-rajdhani text-lg text-white">+91 75948 80678</div>
                 </div>
               </div>
 
@@ -119,7 +120,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <div className="font-rajdhani text-sm text-gray-400">PHYSICAL LOCATION</div>
-                  <div className="font-rajdhani text-lg text-white">Neo Tokyo, Sector 7</div>
+                  <div className="font-rajdhani text-lg text-white">Trivandrum, Kerala, India</div>
                 </div>
               </div>
             </div>
@@ -131,7 +132,7 @@ const Contact = () => {
               </h4>
               <div className="flex space-x-4">
                 <a
-                  href="https://linkedin.com/in/alexquantum"
+                  href="https://www.linkedin.com/in/sabal-krishna-s-29b758298/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group"
@@ -141,7 +142,7 @@ const Contact = () => {
                   </div>
                 </a>
                 <a
-                  href="https://github.com/alexquantum"
+                  href="https://github.com/SabalKR"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group"
@@ -151,13 +152,13 @@ const Contact = () => {
                   </div>
                 </a>
                 <a
-                  href="https://www.unrealengine.com/marketplace/profile/alexquantum"
+                  href="https://create.fortnite.com/22e84a77-69cf-4d8c-b051-ecf41aff30c1/projects/c9906943-4a9b-6c1e-54a5-d8b7afdc9b9c/releases"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group"
                 >
                   <div className="w-12 h-12 bg-neon-red/20 border border-neon-red/30 rounded-lg flex items-center justify-center transition-all duration-300 group-hover:bg-neon-red/30 group-hover:border-neon-red/50 group-hover:shadow-lg group-hover:shadow-neon-red/20">
-                    <Monitor className="w-5 h-5 text-neon-red group-hover:text-white" />
+                    <UnrealLogo className="w-5 h-5 text-neon-red group-hover:text-white" />
                   </div>
                 </a>
               </div>
