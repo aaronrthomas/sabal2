@@ -1,0 +1,265 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom CSS Variables */
+:root {
+  --neon-red: #FF0033;
+  --neon-teal: #00FFD4;
+  --neon-purple: #9D4EDD;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Rajdhani', sans-serif;
+  background: #000000;
+  overflow-x: hidden;
+}
+
+/* Custom Utility Classes */
+.font-orbitron {
+  font-family: 'Orbitron', monospace;
+}
+
+.font-rajdhani {
+  font-family: 'Rajdhani', sans-serif;
+}
+
+.text-neon-red {
+  color: #FF0033;
+}
+
+.text-neon-teal {
+  color: #00FFD4;
+}
+
+.text-neon-purple {
+  color: #9D4EDD;
+}
+
+.bg-neon-red {
+  background-color: #FF0033;
+}
+
+.bg-neon-teal {
+  background-color: #00FFD4;
+}
+
+.bg-neon-purple {
+  background-color: #9D4EDD;
+}
+
+.border-neon-red {
+  border-color: #FF0033;
+}
+
+.border-neon-teal {
+  border-color: #00FFD4;
+}
+
+.border-neon-purple {
+  border-color: #9D4EDD;
+}
+
+.from-neon-red {
+  --tw-gradient-from: #FF0033;
+}
+
+.to-neon-red {
+  --tw-gradient-to: #FF0033;
+}
+
+.from-neon-teal {
+  --tw-gradient-from: #00FFD4;
+}
+
+.to-neon-teal {
+  --tw-gradient-to: #00FFD4;
+}
+
+/* Cyberpunk Components */
+.cyber-button {
+  @apply px-6 py-3 bg-transparent border-2 border-neon-red text-neon-red font-rajdhani font-semibold tracking-wider uppercase transition-all duration-300 hover:bg-neon-red hover:text-black hover:shadow-lg flex items-center justify-center relative overflow-hidden;
+}
+
+.cyber-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 0, 51, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.cyber-button:hover::before {
+  left: 100%;
+}
+
+.cyber-button-outline {
+  @apply px-6 py-3 bg-transparent border border-neon-teal text-neon-teal font-rajdhani font-semibold tracking-wider uppercase transition-all duration-300 hover:border-white hover:text-white hover:shadow-lg flex items-center justify-center;
+}
+
+.cyber-card {
+  @apply bg-gray-900/50 border border-gray-700 rounded-lg backdrop-blur-sm transition-all duration-300 hover:border-neon-red/50 hover:shadow-lg hover:shadow-neon-red/20 relative overflow-hidden;
+}
+
+.cyber-frame {
+  position: relative;
+  padding: 4px;
+  background: linear-gradient(45deg, #FF0033, #00FFD4, #FF0033);
+  border-radius: 12px;
+  animation: borderGlow 3s linear infinite;
+}
+
+.cyber-frame::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  padding: 2px;
+  background: linear-gradient(45deg, #FF0033, transparent, #00FFD4, transparent, #FF0033);
+  border-radius: inherit;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+}
+
+.cyber-grid {
+  background-image: 
+    linear-gradient(rgba(255, 0, 51, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 0, 51, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: gridMove 20s linear infinite;
+}
+
+.cyber-loader {
+  width: 60px;
+  height: 60px;
+  border: 3px solid rgba(255, 0, 51, 0.1);
+  border-top: 3px solid #FF0033;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.cyber-input-group {
+  @apply relative;
+}
+
+.cyber-label {
+  @apply block font-rajdhani text-sm font-semibold text-neon-teal mb-2 tracking-wider uppercase;
+}
+
+.cyber-input {
+  @apply w-full px-4 py-3 bg-transparent border border-gray-600 rounded focus:border-neon-red focus:outline-none transition-colors duration-300 text-white font-rajdhani;
+}
+
+.cyber-input:focus {
+  box-shadow: 0 0 0 1px #FF0033, 0 0 20px rgba(255, 0, 51, 0.2);
+}
+
+/* Glitch Effect */
+.glitch-text {
+  position: relative;
+  animation: glitch 2s linear infinite;
+}
+
+.glitch-text::before,
+.glitch-text::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.glitch-text::before {
+  animation: glitch-1 0.5s linear infinite reverse;
+  color: #FF0033;
+  z-index: -1;
+}
+
+.glitch-text::after {
+  animation: glitch-2 0.5s linear infinite;
+  color: #00FFD4;
+  z-index: -2;
+}
+
+/* Glow Text Effect */
+.glow-text {
+  text-shadow: 
+    0 0 5px currentColor,
+    0 0 10px currentColor,
+    0 0 15px currentColor,
+    0 0 20px currentColor;
+}
+
+/* Animations */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes glitch {
+  0%, 100% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(-2px, -2px); }
+  60% { transform: translate(2px, 2px); }
+  80% { transform: translate(2px, -2px); }
+}
+
+@keyframes glitch-1 {
+  0%, 100% { transform: translate(0); }
+  20% { transform: translate(-1px, -1px); }
+  40% { transform: translate(-1px, -1px); }
+  60% { transform: translate(1px, -1px); }
+  80% { transform: translate(1px, -1px); }
+}
+
+@keyframes glitch-2 {
+  0%, 100% { transform: translate(0); }
+  20% { transform: translate(1px, 1px); }
+  40% { transform: translate(1px, 1px); }
+  60% { transform: translate(-1px, 1px); }
+  80% { transform: translate(-1px, 1px); }
+}
+
+@keyframes borderGlow {
+  0%, 100% { filter: hue-rotate(0deg); }
+  50% { filter: hue-rotate(180deg); }
+}
+
+@keyframes gridMove {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(50px, 50px); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .glitch-text::before,
+  .glitch-text::after {
+    display: none;
+  }
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #FF0033;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00FFD4;
+}
